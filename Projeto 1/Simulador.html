@@ -1,0 +1,52 @@
+<html>
+  <head>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript" src="Desenhar Histograma.js"></script>
+    <script type="text/javascript" src="Desenhar Distancias.js"></script>
+    <script type="text/javascript" src="Desenhar Caminho.js"></script>
+    <script type="text/javascript" src="Desenhar Tudo.js"></script>
+    <script type="text/javascript" src="Variaveis.js"></script>
+    <script type="text/javascript">
+
+      // Load Charts and the corechart package.
+      google.charts.load('current', {'packages':['corechart']});
+
+      // Desenha os plots quando estiverem prontos.
+      google.charts.setOnLoadCallback(drawAll);
+
+      //Alterar os valores para os valores desejados
+      //Numero de Passos
+	  var passos = 10;
+      //Numero de Simulacoes
+	  var simulacoes = 100;
+      //Tamanho dos Passos
+	  var l = 1;
+	  
+	  
+	  
+	  var i, j;
+	  
+      var x = getX();
+      var y = getY();
+      var d = getD();
+	  var f = getF();
+
+      var classes = Math.round(Math.sqrt(simulacoes));
+
+      var temp = getHist();
+      var histogramaX = temp.histX;
+      histogramaX.reverse();
+      var histogramaY = temp.histY;
+      
+    
+    </script>
+  </head>
+  <body>
+    <h1>Graficos</h1>
+
+
+        <div id="Caminho_div" style="border: 5px solid #ccc"></div>
+        <div id="Distancia_div" style="border: 5px solid #ccc"></div>
+        <div id="HistogramaSimulacoes_div" style="border: 5px solid #ccc"></div>
+  </body>
+</html>
